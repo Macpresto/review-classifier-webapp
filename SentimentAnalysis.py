@@ -107,7 +107,7 @@ class SentimentAnalysis(object):
 
     def load_model_file(self):
         try:
-            model = load_model('rcnn-lstm-model.h5')
+            model = load_model('https://github.com/Macpresto/review-classifier-webapp/releases/download/ml/rcnn-lstm-model.h5')
             return model
         except FileNotFoundError:
             print("File model not found!")
