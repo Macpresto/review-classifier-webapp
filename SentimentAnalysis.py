@@ -1,7 +1,12 @@
 import nltk
 
-nltk.data.find('punkt')
-nltk.data.find('stopwords')
+try:
+    nltk.data.find('punkt')
+    nltk.data.find('stopwords')
+
+except LookupError:
+    nltk.download('punkt')
+    nltk.download('stopwords')
 
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import load_model
